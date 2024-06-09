@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>student details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <style>
+       
+       body{
+        background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        background-size: cover;
+        height: 100vh;
+       }
+    
+        .box{
+            position: relative;
+            width: 310px;
+            height: 100px;
+            color:crimson;
+            left: 450px;
+            top: 200px;
+            padding-top: 20px;
+            backdrop-filter:blur(8px);
+            
+                       
+            
+        
+        }
+        button:hover{
+        background-color: aqua;
+       }
+       button{
+        background-color: chocolate;
+        
+        font-weight: bold;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+       }
+      
+      
+        
+        #access{
+            display: none;
+        }
+        .display-text{
+            font-weight: bold;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #message{
+            font-weight: bold;
+            color:chartreuse;
+            text-align: center;
+        }
+        #nameadmin{
+            font-weight: bold;
+            color:chartreuse;
+            text-align: center;
+            
+
+        }
+        
+     
+    </style>
+</head>
+<body >
+    <div class="container">
+        <div class="navbar navbar-light bg-light height ">
+            <img  class="col-sm-2 " src="https://kitsguntur.ac.in/site/imagesnew/logo.png" alt="" height="60px">
+            <img  class="col-sm-2" src="https://kitsguntur.ac.in/site/imagesnew/logo1new1.png" alt="" height="60px">
+            <img  class="col-sm-2" src="https://kitsguntur.ac.in/site/imagesnew/nacc.png" alt=""height="60px">
+            <img  class="col-sm-2" src="https://kitsguntur.ac.in/site/imagesnew/nba_copy1.png" alt=""height="60px">
+          
+            
+        </div>
+       
+    <div class="box" >
+    <table>
+        <tr>
+            <td class="display-text">Admin name:</td>
+            <td><input type="text" id="adminname" placeholder="Admin Name" required></td>
+        </tr>
+        <td  class="display-text">Password:</td>
+        <td><input type="password" id="password" placeholder="Admin Password" required></td>
+        <tr>
+            <td id="message">
+              
+           </td>
+            <td id="nameadmin">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="submit">submit</button>
+            </td>
+        </tr>
+        <tr id="access">
+            <td >
+                
+               <form action="/insertData">
+               <button name="insert"> insert</button>
+               </form>
+            </td>
+            <td >
+                <form action="/showpage" method="post" >
+                <button name="show">show</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+    
+</div>
+</div>
+       <script type="text/javascript">
+          var admin="harish";
+          var password="harish";
+         document.getElementById("submit").onclick=function(){
+            var uadmin=document.getElementById("adminname").value;
+            var upassword=document.getElementById("password").value;
+            if(uadmin==admin && upassword==password){
+                document.getElementById("message").innerHTML="log in successfull!! ";
+                document.getElementById("nameadmin").innerHTML="welcome "+admin;
+               document.getElementById("message").style.color="chartreuse";
+                
+                document.getElementById("access").style.display="block";
+                document.getElementById("submit").style.display="none";
+
+            }
+            else{
+                document.getElementById("message").innerHTML="wrong details!!";
+                document.getElementById("message").style.color="red";
+            }
+         }
+
+       </script>
+       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+   
+</body>
+</html>

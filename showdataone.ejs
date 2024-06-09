@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>data show</title>
+    <style>
+           body{
+            background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        
+       }
+       .blur{
+        
+        backdrop-filter:blur(50px);
+        color: gold;
+       }
+       h1{
+        text-align: center;
+       }
+    </style>
+   
+
+</head>
+<body>
+       <div class="blur">
+    <%  if(students.length>0) { %>
+    <h1>Student Details:</h1>
+    <table border="1" width="100%">
+        <tr>
+            <th> Roll No</th>
+            <th> Name</th>
+            <th>Blood Group</th>
+            <th> Result</th>
+        </tr>
+     
+     
+     
+         <tr>
+            <td >
+               <%-  students[0].rollno %>
+                </td>
+                <td>
+                    <%-  students[0].name %>   
+                </td>
+                <td>
+                    <%-  students[0].bloodGroup %>
+                </td>
+                <td>
+                    <%-  students[0].result %>
+                </td>
+         </tr>
+         
+         <% }else{  %>
+         <h1>data not found!!!</h1>
+         <%  }%>
+
+
+    </table>
+</div>
+
+</body>
+</html>

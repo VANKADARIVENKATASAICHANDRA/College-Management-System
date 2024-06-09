@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>show</title>
+    <style>
+           body{
+            background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        background-size: cover;
+        height: 100vh;
+       
+       }
+       table{
+           position: relative;
+           top: 200px;
+           left: 500px;
+           
+           backdrop-filter:blur(30px);
+           
+       }
+       td{
+        font-size: 20px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color:crimson;
+        font-weight: bold;
+       }
+       button:hover{
+        background-color: aqua;
+       }
+       button{
+        background-color: chocolate;
+        
+        font-weight: bold;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+       }
+    </style>
+</head>
+<body>
+   
+   
+        <table >
+            <tr>
+                <form action="/showOne" method="post">
+                <td><b> Enter no:</b> <input type="text" name="rollnos" placeholder="Roll No" required></td>
+            </tr>
+            <tr>
+                <td>   <button name="submit"> submit</button>
+                </td>
+                </form>
+            </tr>
+                
+            <tr>
+                <form action="/showAllData">
+                    <td>
+                        <button> show all</button>
+                    </td>
+                </form>
+            </tr>
+        </table>
+    
+       
+     
+
+ 
+    
+</body>
+</html>
